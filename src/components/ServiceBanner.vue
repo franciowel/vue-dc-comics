@@ -1,7 +1,7 @@
 <template>
 <div class="color">
     <div class="contain flexcontain">
-        <div class="services" v-for="element in ServiceBanner" :key="element">
+        <div class="services" v-for="element in serviceContent" :key="element">
             <img v-bind:src="element.img" :alt="element.text">
             <p>{{ element.text }}</p>
         </div>
@@ -54,14 +54,18 @@ export default {
     align-items: center;
     img {
         width: 78px;
-        padding: 10px;
+        padding: 0.7rem;
+    }
+    p {
+        font-size: 0.8rem;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
 .flexcontain{
         align-items: center;
         height: 100%;
         color: white;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 div {
     img {

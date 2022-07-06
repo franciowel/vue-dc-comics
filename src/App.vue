@@ -10,7 +10,10 @@
       <ServiceBanner/>
     </main>
 
-    <!-- FOOTER -->
+    <footer>
+      <FooterLink/>
+    </footer>
+
     </div>
 </template>
 
@@ -18,6 +21,7 @@
 import myHeaderDC from './components/myHeaderDC.vue'
 import MainContent from './components/MainContent.vue'
 import ServiceBanner from './components/ServiceBanner.vue'
+import FooterLink from './components/FooterLink.vue'
 
 export default {
   name: 'App',
@@ -25,10 +29,11 @@ export default {
     myHeaderDC,
     MainContent,
     ServiceBanner,
+    FooterLink,
   }
 }
 </script>
 
 <style lang="scss">
-@import './style/commons.scss'
+@import './style/commons.scss';
 </style>
