@@ -7,7 +7,7 @@
 
     <main>
       <MainContent/>
-      <!-- BLUEJUMBO -->
+      <ServiceBanner/>
     </main>
 
     <!-- FOOTER -->
@@ -17,12 +17,14 @@
 <script>
 import myHeaderDC from './components/myHeaderDC.vue'
 import MainContent from './components/MainContent.vue'
+import ServiceBanner from './components/ServiceBanner.vue'
 
 export default {
   name: 'App',
   components: {
     myHeaderDC,
     MainContent,
+    ServiceBanner,
   }
 }
 </script>
