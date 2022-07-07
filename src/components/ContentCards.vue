@@ -17,8 +17,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/font.scss';
+
 p {
     margin-top: 20px;
+    font-family: $similfont;
 }
 .card {
     width: 190px;
