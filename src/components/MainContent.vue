@@ -7,8 +7,18 @@
 </template>
 
 <script>
+import ComicJson from '../assets/dc-comics.json';
+import ContentCards from '../ContentCards.vue';
 export default {
-    name: 'MainContent'
+    name: "ContentComponent",
+    components: { 
+        ComicCard
+        },
+    data() {
+        return {
+            comics: ComicJson
+        }
+    }
 }
 </script>
 
