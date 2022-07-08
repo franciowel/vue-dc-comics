@@ -4,9 +4,9 @@
             <ContentCards v-for="element, index in comics" :key="index" :comicDetails="element" />
         </div>
         <div class="flex">
-            <div class="btn">
+            <a class="btn" href="#">
                 LOAD MORE
-            </div>
+            </a>
         </div>
     </div>
 </template>
@@ -29,11 +29,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/color.scss';
+@import '../style/font.scss';
+
 .color{
     background-color: #1c1c1c;
     color: white;
-    // height: 150px;
-    padding: 1rem 0;
+    padding: 3rem 0;
     .contain{
         height: 100%;
         align-items: center;
@@ -42,14 +43,19 @@ export default {
             font-size: 1.5rem;
             font-family: Arial, Helvetica, sans-serif;
         }
+    }
     .flex{
         display: flex;
         justify-content: center;
-        // .btn div{
-        //     background-color: blue;
-        //     font-family: Arial, Helvetica, sans-serif;
-        // }
+        
     }
+    .btn{
+        background-color: $primary;
+        font-family: $similfont;
+        padding: 0.8rem 5rem;
+        color: white;
+        font-weight: 600;
+        margin-top: 1rem;
     }
 }
 </style>

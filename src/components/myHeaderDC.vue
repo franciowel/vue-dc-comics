@@ -9,8 +9,8 @@
             <div class="navbar">
                 
                 <ul class="flexcontain">
-                    <li v-for="link in navbarLink" :key="link" :class="{'active' : link.active}">
-                        <span :class="{'color': link.active}">{{link.text}}</span>
+                    <li v-for="item, index in navbarLink" :key="index" :class="{'active' : item.active}" @click="activeSet(index)">
+                        <span :class="{'color': item.active}">{{item.text}}</span>
                     </li>
                 </ul>
             </div>
@@ -21,6 +21,17 @@
 <script>
 export default {
     name: 'myHeaderDc',
+    methods: {
+        activeSet(index) {
+            if (this.navbarLink[index].active) {
+                console.log('active now')
+            } else {
+                for (let i = 0; i < this.navbarLink.length; i++) {
+                    this.navbarLink[i].active = false
+                } this.navbarLink[index].active = true
+            }
+        }
+    },
     data () {
         return {
             navbarLink: [
@@ -85,6 +96,7 @@ export default {
 }
 li {
     padding: 5px;
+    cursor: pointer;
     font-weight: 500;
     align-self: center;
     font-size: 0.9rem;
